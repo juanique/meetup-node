@@ -1,7 +1,7 @@
-
+'''
 class CouchModel extends Backbone.Model
     url : ->
-
+        return "/api/"
 
 class CouchCollection extends Backbone.Collection
     model : CouchModel
@@ -9,3 +9,4 @@ class CouchCollection extends Backbone.Collection
 
 window.CouchModel = CouchModel
 window.CouchCollection = CouchCollection
+'''
