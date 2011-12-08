@@ -1,0 +1,203 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Express</title>
+</head>
+
+<body>
+
+	<style>
+
+		body{
+			font-family: Arial,Tahoma;
+			font-size: 11px;
+			background-color: #BDCEAA;
+			color: #BDCEAA;
+			text-shadow: 1px 1px 1px #000;
+
+		}
+
+		h1{
+			font-size: 30px;
+			color: #F23E2D;
+			text-shadow: 2px 1px 1px #000;
+		}
+		.content{
+			width: 1024px;
+			margin: 0 auto;	
+		}
+		.left,.right{
+			display: inline;
+			color: #E3E2CA;
+			font-weight: bold;
+			padding: 20px;
+		}
+
+		.left{
+			float: left;
+			width: 662px;
+			background-color: #206D7D;
+		}
+
+		.right{
+			float: right;
+			width: 282px;
+			background-color: #F23E2D;
+		}
+
+		.login{
+			padding: 20px;
+			width: 984px;
+			color: #000;
+		}
+
+		.question{
+			padding: 10px;
+			margin: 5px 5px;
+			min-height: 30px;
+			background-color: #F23E2D;
+		}
+
+		.answer .question{
+			background-color: #094B5B;
+		}
+
+		.button{}	
+
+		.answer{			
+			padding: 10px;
+			margin-bottom: 10px;
+			background-color: #094B5B;
+		}
+
+		.icon{
+			float: left;
+			width: 15px;
+			margin-right: 10px;
+		}	
+		.wite textarea{
+			width: 800px;
+		}
+		.tarea{
+			height: 70px;
+			padding: 5px;
+			margin: 5px;
+			border: 1px solid #fff;
+		}
+
+		.wide{width: 630px;}
+		.short{width: 230px;}
+
+		div.question.ok{
+			background: url(ok.png) top right no-repeat;
+			background-size: 30px;
+		}
+
+		div.question.error{
+			background: url(warning.png) top right no-repeat;
+			background-size: 30px;
+		}
+
+		.question-name{
+			width: 550px;
+			font-size: 13px;
+		}
+
+		.awesome{
+			background: #222;
+			display: inline-block;
+			padding: 5px 10px 6px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: bold;
+			line-height: 1;
+			-moz-box-shadow: 0 1px 3px #999;
+			-webkit-box-shadow: 0 1px 3px #999;
+			text-shadow: 0 -1px 1px #222;
+			border-bottom: 1px solid #222;
+			position: relative;
+			cursor: pointer;
+		}
+		
+	</style>
+
+	<div class="content">
+		<h1>Express</h1>
+		<div class='login'>
+			<label>Nombre</label>
+			<input type="text" name='name'>
+			<label>Email</label>
+			<input type="text" name='email'>
+		</div>
+		<div class="right">
+			<h2>Question Set</h2>
+			<div class='question'>
+				<img class='icon' src='cross.png' />
+				<span class='question-name'>Esta es una pregunta</span>
+			</div>				
+			<div class='question'>
+				<img class='icon' src='cross.png' />
+				<span class='question-name'>Esta es una pregunta</span>
+			</div>	
+			
+			<div class='question new'>
+				<textarea class='tarea short' name='new-question'>
+					This is another preset text...
+				</textarea>
+				<br/>
+				<input class='awesome' type='submit' name='send' value="Submit New Question" />
+			</div>		
+		</div>
+		<div class="left">
+			<h2>Candidate Panel</h2>
+			<div class="question-list">
+				<div class='answer'>
+					
+					<div class='question error'>
+						<img class='icon' src='cross.png' />
+						<div class='question-name'>This is the question...!!!!</div>
+						<div class='feedback ok' ></div>
+						<div class='feedback error' ></div>
+					</div>
+					<div class='write'>
+						<textarea name='answ' class="tarea wide">This is a preset text...</textarea>
+						<input class='awesome' type='submit' name='answer' value="Answer" />
+					</div> 
+				</div>
+				<div class='answer'>
+					
+					<div class='question'>
+						<img class='icon' src='cross.png' />
+						<div class='question-name'>This is the question...!!!!</div>
+						<div class='feedback ok' ></div>
+						<div class='feedback error' ></div>
+					</div>
+					<div class='write'>
+						<textarea name='answ' class="tarea wide">This is a preset text...</textarea>
+						<input class='awesome' type='submit' name='answer' value="Answer" />
+					</div> 
+				</div>
+				<div class='answer'>
+					
+					<div class='question ok'>
+						<img class='icon' src='cross.png' />
+						<div class='question-name'>It is a long established, ¿Fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distributio?</div>
+						<div class='feedback ok' ></div>
+						<div class='feedback error' ></div>
+					</div>
+					<div class='write'>
+						<textarea name='answ' class="tarea wide">This is a preset text...</textarea>
+						<input class='awesome' type='submit' name='answer' value="Answer" />
+					</div> 
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+</body>
+
+</html>

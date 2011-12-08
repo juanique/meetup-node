@@ -2,7 +2,7 @@ class CouchModel extends Backbone.Model
     idAttribute : "_id"
     url : ->
         if @id
-            return "/api/questions/#{@_id}"
+            return "/api/questions/#{@get('_id')}"
         return "/api/questions/"
 
 class CouchCollection extends Backbone.Collection

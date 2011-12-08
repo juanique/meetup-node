@@ -13,7 +13,7 @@
     CouchModel.prototype.idAttribute = "_id";
 
     CouchModel.prototype.url = function() {
-      if (this.id) return "/api/questions/" + this._id;
+      if (this.id) return "/api/questions/" + (this.get('_id'));
       return "/api/questions/";
     };
 
