@@ -1,9 +1,17 @@
 define [], () ->
     
-    class Test extends Backbone.Model
+    class Candidate extends Backbone.Model
+        
+    class Question extends Backbone.Model
 
-    class Tests extends Backbone.Collection
-        model: Test
-        url: '/test'
+    class Questions extends Backbone.Collection
+        model: Question
 
-    return { Test: Test, Tests: Tests}
+    class Session extends Backbone.Model
+
+    return {
+        Candidate: Candidate
+        Question: Question
+        Questions: Questions
+        Session: Session
+    }
