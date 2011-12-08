@@ -27,7 +27,7 @@ app.configure "production", ->
 
 app.get "/", routes.index
 
-app.get /^\/api\/(.*)/, (request, response) ->
+proxy = (request, response) ->
     proxy_url = "/"+request.params[0]
     proxy = http.createClient(5984, '127.0.0.1')
     proxy_request = proxy.request(request.method, proxy_url, request.headers)
@@ -45,6 +45,11 @@ app.get /^\/api\/(.*)/, (request, response) ->
 
     request.addListener "end", ->
         proxy_request.end()
+
+app.get /^\/api\/(.*)/, (request, response) ->
+    proxy(request, response)
+app.post /^\/api\/(.*)/, (request, response) ->
+    proxy(request, response)
 
 
 app.listen 3000
