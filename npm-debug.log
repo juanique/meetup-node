@@ -1,0 +1,58 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'http-proxy' ]
+info using npm@1.1.0-alpha-6
+info using node@v0.6.5
+verbose config file /home/juanique/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/local/lib/node_modules/npm/npmrc
+verbose caching /home/juanique/huevapi/package.json
+verbose loadDefaults application-name@0.0.1
+verbose caching /home/juanique/huevapi/node_modules/express/package.json
+verbose loadDefaults express@2.5.1
+verbose caching /home/juanique/huevapi/node_modules/jade/package.json
+verbose loadDefaults jade@0.19.0
+verbose caching /home/juanique/huevapi/node_modules/coffee-script/package.json
+verbose loadDefaults coffee-script@1.1.3
+verbose from cache /home/juanique/huevapi/package.json
+verbose into /home/juanique/huevapi [ 'http-proxy' ]
+verbose cache add http-proxy
+verbose cache add [ 'http-proxy', null ]
+silly cache add: name, spec, args [ undefined, 'http-proxy', [ 'http-proxy', null ] ]
+verbose parsed url { pathname: 'http-proxy',
+verbose parsed url   path: 'http-proxy',
+verbose parsed url   href: 'http-proxy' }
+info addNamed [ 'http-proxy', '' ]
+verbose addNamed [ null, '' ]
+verbose GET http-proxy
+verbose raw, before any munging http-proxy
+verbose url resolving [ 'https://registry.npmjs.org/', './http-proxy' ]
+verbose url resolved https://registry.npmjs.org/http-proxy
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"B5NXJEA3FCRZEFGP0DLWRN7ZQ"',
+silly get cb     date: 'Thu, 08 Dec 2011 00:24:06 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '22431' } ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/juanique/.npm/http-proxy'
+verbose mkdir done: /home/juanique/.npm/http-proxy 755
+ERR! Error: No compatible version found: http-proxy
+ERR! No valid targets found.
+ERR! Perhaps not compatible with your version of node?
+ERR!     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache.js:429:10)
+ERR!     at /usr/local/lib/node_modules/npm/lib/cache.js:411:17
+ERR!     at Object.saved [as oncomplete] (/usr/local/lib/node_modules/npm/lib/utils/npm-registry-client/get.js:136:7)
+ERR! Report this *entire* log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Linux 3.0.0-12-generic
+ERR! command "node" "/usr/local/bin/npm" "install" "http-proxy"
+ERR! cwd /home/juanique/huevapi
+ERR! node -v v0.6.5
+ERR! npm -v 1.1.0-alpha-6
+ERR! message No compatible version found: http-proxy
+ERR! message No valid targets found.
+ERR! message Perhaps not compatible with your version of node?
+verbose exit [ 1, true ]
