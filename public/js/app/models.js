@@ -2,36 +2,58 @@
   var __hasProp = Object.prototype.hasOwnProperty, __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
   define([], function() {
-    var Test, Tests;
-    Test = (function() {
+    var Candidate, Question, Questions, Session;
+    Candidate = (function() {
 
-      __extends(Test, Backbone.Model);
+      __extends(Candidate, Backbone.Model);
 
-      function Test() {
-        Test.__super__.constructor.apply(this, arguments);
+      function Candidate() {
+        Candidate.__super__.constructor.apply(this, arguments);
       }
 
-      return Test;
+      return Candidate;
 
     })();
-    Tests = (function() {
+    Question = (function() {
 
-      __extends(Tests, Backbone.Collection);
+      __extends(Question, Backbone.Model);
 
-      function Tests() {
-        Tests.__super__.constructor.apply(this, arguments);
+      function Question() {
+        Question.__super__.constructor.apply(this, arguments);
       }
 
-      Tests.prototype.model = Test;
+      return Question;
 
-      Tests.prototype.url = '/test';
+    })();
+    Questions = (function() {
 
-      return Tests;
+      __extends(Questions, Backbone.Collection);
+
+      function Questions() {
+        Questions.__super__.constructor.apply(this, arguments);
+      }
+
+      Questions.prototype.model = Question;
+
+      return Questions;
+
+    })();
+    Session = (function() {
+
+      __extends(Session, Backbone.Model);
+
+      function Session() {
+        Session.__super__.constructor.apply(this, arguments);
+      }
+
+      return Session;
 
     })();
     return {
-      Test: Test,
-      Tests: Tests
+      Candidate: Candidate,
+      Question: Question,
+      Questions: Questions,
+      Session: Session
     };
   });
 
