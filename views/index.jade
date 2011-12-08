@@ -1,2 +1,7 @@
 h1= title
 p Welcome to #{title}
+
+script(type="text/template", id="test-tmpl")
+  li <%=test%>
+script(type="text/template", id="tests-tmpl")
+  ul(class="tests")

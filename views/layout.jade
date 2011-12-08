@@ -3,5 +3,11 @@ html
   head
     title= title
     link(rel='stylesheet', href='/css/style.css')
-    script(src="js/home.js")
+    script(src="js/underscore-min.js")
+    script(src="js/require.js")
   body!= body
+  script
+    var res = require({
+      baseUrl: 'js',
+      priority: ['jquery', 'backbone']
+    }, ['app', 'jquery.couch'], function(csmain) { window.csmain = csmain });
