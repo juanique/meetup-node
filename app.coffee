@@ -91,6 +91,8 @@ app.get /^\/api\/(.*)/, (request, response) ->
     proxy(request, response)
 app.post /^\/api\/(.*)/, (request, response) ->
     proxy(request, response)
+app.put /^\/api\/(.*)/, (request, response) ->
+    proxy(request, response)
     #response.send(querystring.stringify(request.body))
     #post_proxy(request, response)
 

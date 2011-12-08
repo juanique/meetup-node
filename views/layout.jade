@@ -5,10 +5,10 @@ html
     link(rel='stylesheet', href='/css/style.css')
     script(src="js/underscore-min.js")
     script(src="js/require.js")
+    script(src="js/jquery.js")
+    script(src="js/backbone.js")
     script(src="js/couch.js")
   body!= body
   script
-    var res = require({
-      baseUrl: 'js',
-      priority: ['jquery', 'backbone']
-    }, ['app', 'jquery.couch'], function(app) { window.app = app });
+      var c = new CouchCollection();
+      c.fetch();
